@@ -38,7 +38,7 @@ defmodule Chop do
     do_print(actual, min..max, guess)
   end
 
-  defp do_guess(actual, _min.._max, guess) when guess == actual do
+  defp do_guess(actual, _, guess) when guess == actual do
     IO.puts "Is it #{guess}\n#{guess}"
   end
 
