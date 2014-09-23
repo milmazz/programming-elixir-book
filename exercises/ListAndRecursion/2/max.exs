@@ -1,11 +1,14 @@
 defmodule MyList do
+  @moduledoc """
+  Write `max(list)` that returns the element with the maximum value in the list.
+
+  Exercise: ListAndRecursion-2
+  """
   def max([head | tail]), do: do_max(tail, head)
 
-  defp maximum(a, b) when a > b, do: a
-  defp maximum(a, b), do: b
-
   defp do_max([], value), do: value
+
   defp do_max([head | tail], value) do
-    do_max(tail, maximum(head, value))
+    do_max(tail, Kernel.max(head, value))
   end
 end
