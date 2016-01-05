@@ -7,8 +7,8 @@ defmodule Issues.Mixfile do
      elixir: "~> 1.0",
      escript: escript_config,
      name: "Issues",
-     source_url: "https://github.com/milmazz/issues",
-     homepage_url: "https://github.com/milmazz/issues",
+     source_url: "https://github.com/milmazz/programming-elixir-book",
+     homepage_url: "https://github.com/milmazz/programming-elixir-book",
      deps: deps]
   end
 
@@ -29,14 +29,12 @@ defmodule Issues.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [
-      { :httpoison, "~> 0.5" },
-      { :exjsx, "~> 3.1.0" },
-      { :ex_doc, "~> 0.6", only: :dev}
-    ]
+    [{:httpoison, "~> 0.5"},
+     {:exjsx, "~> 3.1.0"},
+     {:ex_doc, "~> 0.6", only: :dev}]
   end
 
   defp escript_config do
-    [ main_module: Issues.CLI ]
+    [main_module: Issues.CLI]
   end
 end
